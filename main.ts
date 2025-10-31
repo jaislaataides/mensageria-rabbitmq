@@ -1,1 +1,1 @@
-import './in-memory/main'
+console.log('Main Program');
