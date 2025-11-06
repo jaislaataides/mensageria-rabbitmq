@@ -1,18 +1,19 @@
 export interface Message {
   id: string;
-  name: string;
+  header: string;
   payload: string;
 }
 
 export type CreateMessageInput = {
   id?: string;
-  name: string;
-  payload: string;
+  header?: Record<string, any>;
+  payload: Record<string, any>;
 };
+
 export function createMessage(input: CreateMessageInput): Message {
   return {
     id: input.id ?? crypto.randomUUID(),
-    name: input.name,
-    payload: input.payload,
+    header: JSON.stringify(input.header),
+    payload: JSON.stringify(input.payload),
   };
 }
