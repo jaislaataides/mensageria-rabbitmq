@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "exemplo de mensageria",
   "scripts": {
-    "start": "node main.ts",
+    "start": "tsx main.ts",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write ./**/*.{ts,js}"
   },
@@ -14,6 +14,7 @@
     "@types/amqplib": "^0.10.8",
     "@types/node": "^24.9.1",
     "prettier": "^3.6.2",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {
